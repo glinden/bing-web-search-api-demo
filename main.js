@@ -15,9 +15,8 @@ function displaySearchResults(data) {
     // document.getElementById('results').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
 
     if (!data || !data.webPages || !data.webPages.value) { 
-        // Nothing! This doesn't happen very often. When it does, give the option of going to Google instead.
+        // Nothing! This doesn't happen very often.
         document.getElementById('results').innerHTML = 'Sorry, there are no results for that query.';
-        addGoogleLinks(data.queryContext.originalQuery);
         return;
     }
 
